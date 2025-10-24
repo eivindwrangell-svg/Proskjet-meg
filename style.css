@@ -351,7 +351,7 @@ th {
 /* Ferie galleri */
 
 /* Spania */
-.spania-body{
+.spania-body {
     background-image: url(./Bilder/spania-11.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -367,7 +367,8 @@ th {
     margin: 0 auto;
     padding: 20px;
     border-radius: 20px;
-    background-color: rgb(26, 85, 175);;
+    background-color: rgb(26, 85, 175);
+    ;
 }
 
 .gallery-spania img {
@@ -389,7 +390,7 @@ th {
 
 
 /* Italia */
-.Italia-body{
+.Italia-body {
     background-image: url(./Bilder/Italia-Bakgrunn.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -405,7 +406,8 @@ th {
     margin: 0 auto;
     padding: 20px;
     border-radius: 20px;
-    background-color: rgb(26, 85, 175);;
+    background-color: rgb(26, 85, 175);
+    ;
 }
 
 .gallery-italia img {
@@ -419,7 +421,7 @@ th {
     grid-row-start: 1;
     grid-row-end: 3;
     grid-column-start: 2;
-    grid-column-end:  4;
+    grid-column-end: 4;
 }
 
 .gallery-italia img:nth-child(7) {
@@ -428,8 +430,8 @@ th {
 }
 
 /* Bali */
-.Bali-body{
-    background-image: url(./Bilder/bakgrunnsbilde.bali.jpg);
+.Bali-body {
+    background-image: url(Bilder/bakgrunnsbilde.bali.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -444,7 +446,8 @@ th {
     margin: 0 auto;
     padding: 20px;
     border-radius: 20px;
-    background-color: rgb(26, 85, 175);;
+    background-color: rgb(26, 85, 175);
+    ;
 }
 
 .gallery-Bali img {
@@ -458,10 +461,28 @@ th {
     grid-row-start: 1;
     grid-row-end: 3;
     grid-column-start: 2;
-    grid-column-end:  4;
+    grid-column-end: 4;
 }
 
 .gallery-Bali img:nth-child(7) {
     grid-column: span 2;
     grid-row: span 2;
+}
+.section-2{
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-top: 20px;
+}
+
+.section-2 div{
+    border-radius: 20px;
+    background-color: rgb(26, 85, 175);
+    padding: 20px;
+    
+    
+}
+
+.section-2 div img {
+    max-width: 300px;
 }

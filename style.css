@@ -115,7 +115,8 @@ header {
     border-radius: 20px;
     color: aliceblue;
     font-size: 20px;
-    min-height: 150px;
+    
+    min-height: 250px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -138,8 +139,8 @@ header {
     color: aliceblue;
     border-radius: 20px;
     flex: 1 1 250px;
-    max-width: 1fr;
-    min-width: 250px;
+    max-width: 350px;
+    min-width: 30%;
 }
 
 .flex-container h2 {
@@ -211,8 +212,8 @@ th {
 .Historie { background-color: chocolate; color: white; }
 
 
-/* RESPONSIVE DESIGN */
-@media (max-width: 768px) {
+/* RESPONSIVT DESIGN */
+@media (max-width: 770px) {
     h1 {
         font-size: 32px;
         padding: 15px 30px;
@@ -280,10 +281,19 @@ th {
     display: flex;
     padding: 40px 20px;
     justify-content: center;
-    gap: 67px;
+    gap: 60px;
 }
+
+.ferie-intro .ferie{
+    width: 400px;
+    box-sizing: border-box;
+}
+
+
 .ferie img{
-    max-width: 400px;
+    max-width: 100%;
+    height: auto;
+
 }
 .ferie-intro .ferie:last-child{
     width: 400px;
@@ -300,116 +310,28 @@ th {
 
 
 
-/* FAMILY TREE */
-.family-tree {
-    max-width: 1400px;
-    margin: 40px auto;
-    padding: 40px 20px;
-    position: relative;
-}
+/* Ferie galleri */
+.gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
 
-.tree-row {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    gap: 40px;
-    margin-bottom: 80px;
-    position: relative;
-}
+        .gallery img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
 
-.top-row {
-    margin-bottom: 100px;
-}
+        /* Forskjellige størrelser */
+        .gallery img:nth-child(1) {
+        grid-column: span 2;
+        grid-row: span 2;
+        }
 
-.family-member {
-    text-align: center;
-    position: relative;
-}
-
-.family-member img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 5px solid rgb(26, 85, 175);
-    background-color: white;
-    transition: transform 300ms ease, box-shadow 300ms ease;
-}
-
-.family-member:hover img {
-    transform: scale(1.1);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-}
-
-.family-member p {
-    margin-top: 15px;
-    font-size: 18px;
-    font-weight: 600;
-    color: rgb(26, 85, 175);
-}
-
-.family-member.me img {
-    border-color: gold;
-    border-width: 6px;
-}
-
-.family-member.me p {
-    color: gold;
-    font-size: 20px;
-}
-
-/* Connection lines */
-.parent-connections {
-    position: relative;
-    height: 60px;
-    margin: 0 auto 20px;
-}
-
-.line-to-children {
-    position: absolute;
-    width: 60%;
-    height: 2px;
-    background-color: rgb(26, 85, 175);
-    top: -40px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.line-to-children::before {
-    content: '';
-    position: absolute;
-    width: 2px;
-    height: 40px;
-    background-color: rgb(26, 85, 175);
-    left: 50%;
-    top: 0;
-}
-
-.parent::after {
-    content: '';
-    position: absolute;
-    width: 2px;
-    height: 50px;
-    background-color: rgb(26, 85, 175);
-    bottom: -50px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.step-parent::before {
-    content: '';
-    position: absolute;
-    width: 80px;
-    height: 2px;
-    background-color: rgb(26, 85, 175);
-    top: 50%;
-    opacity: 0.5;
-}
-
-.step-parent:first-child::before {
-    left: 100%;
-}
-
-.step-parent:last-child::before {
-    right: 100%;
-}
+        .gallery img:nth-child(7) {
+            grid-column: span 2;
+            grid-row: span 2;
+        }

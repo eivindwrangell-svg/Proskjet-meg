@@ -390,14 +390,14 @@ th {
 
 /* Italia */
 .Italia-body{
-    background-image: url();
+    background-image: url(./Bilder/Italia-Bakgrunn.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
 }
 
-.gallery-spania {
+.gallery-italia {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
@@ -408,19 +408,21 @@ th {
     background-color: rgb(26, 85, 175);;
 }
 
-.gallery-spania img {
+.gallery-italia img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
 /* Forskjellige størrelser */
-.gallery-spania img:nth-child(1) {
-    grid-column: span 2;
-    grid-row: span 2;
+.gallery-italia img:nth-child(3) {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end:  4;
 }
 
-.gallery-spania img:nth-child(7) {
+.gallery-italia img:nth-child(7) {
     grid-column: span 2;
     grid-row: span 2;
 }

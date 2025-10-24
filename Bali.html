@@ -8,63 +8,52 @@
 
 
     <title>Bildegaleri</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            padding: 20px;
-            background: #f0f0f0;
-        }
-
-        h1 {
-            text-align: center;
-        }
-
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 10px;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .gallery img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        /* Forskjellige størrelser */
-        .gallery img:nth-child(1) {
-            grid-column: span 2;
-            grid-row: span 2;
-        }
-
-        .gallery img:nth-child(4) {
-            grid-column: span 2;
-        }
-
-        .gallery img:nth-child(6) {
-            grid-row: span 2;
-        }
-
-        .gallery img:nth-child(7) {
-            grid-column: span 2;
-        }
-    </style>
-</head>
-<body class="Bali-body">
-    <h1>Bildegaleri</h1>
     
-    <div class="gallery-bali">
-        <img src="https://picsum.photos/400/400?random=1" alt="Bilde 1">
-        <img src="https://picsum.photos/400/400?random=2" alt="Bilde 2">
-        <img src="https://picsum.photos/400/400?random=3" alt="Bilde 3">
-        <img src="https://picsum.photos/400/400?random=4" alt="Bilde 4">
-        <img src="https://picsum.photos/400/400?random=5" alt="Bilde 5">
-        <img src="https://picsum.photos/400/400?random=6" alt="Bilde 6">
-        <img src="https://picsum.photos/400/400?random=7" alt="Bilde 7">
-        <img src="https://picsum.photos/400/400?random=8" alt="Bilde 8">
-        <img src="https://picsum.photos/400/400?random=9" alt="Bilde 9">
+</head>
+<!-- NAVBAR - Skal i alle sidene -->
+    <header>
+        <div class="nav">
+            <ul>
+                <li><a href="index.html"><i class="fa-solid fa-house-user fa-lg"></i>Hjem</a></li>
+                <li><a href="timeplan.html"><i class="fa-solid fa-calendar-days fa-lg"></i>Timeplan</a></li>
+                <li><a href="#"><i class="fa-solid fa-headphones fa-lg"></i>Interesser</a></li>
+                <li><a href="Familie.html"><i class="fa-solid fa-people-group fa-lg"></i>Min familie</a></li>
+                <li><a href="Ferier.html"><i class="fa-solid fa-plane-departure fa-lg"></i>Ferier</a></li>
+            </ul>
+        </div>
+    </header>
+    <!-- /NAVBAR -->
+<body class ="bali-body">
+    <h1>Min tur til Bali</h1>
+    
+    <div class="gallery-Bali">
+        <img src="./Bilder/bali-1.jpeg" alt="Bilde 1">
+        <img src="./Bilder/bali2.jpeg" alt="Bilde 2">
+        <img src="./Bilder/bali7.jpeg" alt="Bilde 3">
+        <img src="./Bilder/bali8.jpeg" alt="Bilde 4">
+        <img src="./Bilder/bali3.jpg" alt="Bilde 5">
+        <img src="./Bilder/bali9.jpeg" alt="Bilde 6">
+        <img src="./Bilder/bali5.jpg" alt="Bilde 7">
+        <img src="./Bilder/bali4.jpg" alt="Bilde 8">
+        <img src="./Bilder/bali6.jpg" alt="Bilde 9">
     </div>
+    <!-- FOOTER -->
+    <footer>
+        <ul>
+            <li>Opphavsrett Eivind Wrangell AS © 2025</li>
+            <li>Ansvarlig redaktør: Eivind Wrangell</li>
+            <li>Nettsjef: Markus Mielnik</li>
+        </ul>
+        <ul>
+            <li><i class="fa-solid fa-face-smile fa-2xl"></i></li>
+        </ul>
+        <ul>
+            <li> <h2>Kontakt meg;</h2></li>
+            <li>Arbeid (Jysk): 21 49 36 00 </li>
+            <li>Personlig telefon : 91 15 80 12</li>
+            <li>Email : eivind.wrangell@icloud.com</li>
+        </ul>
+    </footer>
+    <!-- /FOOTER -->
 </body>
 </html>

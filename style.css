@@ -12,6 +12,7 @@ body {
     font-size: 16px;
     font-family: "Roboto", sans-serif;
     text-align: center;
+    min-height: 100vh;
 }
 
 h1 {
@@ -78,16 +79,20 @@ header {
     background-color: blueviolet;
 }
 
+section{
+    max-width: 1300px;
+    margin: 0 auto;
+}
 /* SECTION 1 */
 .section-1 {
     display: flex;
     align-items: center;
     gap: 30px;
     padding: 20px;
-    margin: 20px;
     background-color: rgb(26, 85, 175);
     color: white;
     border-radius: 20px;
+    margin-top: 30px;
 }
 
 .section-1 img {
@@ -98,30 +103,16 @@ header {
 }
 
 .section-1 p {
-    font-size: 20px;
+    max-width: 60%;
+    margin: 0 auto;
+    font-size: 30px;
     text-align: left;
     flex: 1;
+    transition: 300ms;
+
 }
-
-
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 20px;
-}
-
-.grid-container>* {
-    background-color: rgb(26, 85, 175);
-    padding: 20px;
-    border-radius: 20px;
-    color: aliceblue;
-    font-size: 20px;
-
-    min-height: 250px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.section-1 p:hover{
+    transform: scale(1.1);
 }
 
 .flex {
@@ -174,6 +165,19 @@ footer li {
 footer h2 {
     font-size: 20px;
     margin-bottom: 10px;
+}
+
+/* AI bilde */
+section div img {
+    padding: 20px;
+    background-color: rgb(26, 85, 175);
+    max-width: 50%;
+    border-radius: 20px;
+}
+
+.ai-bilde {
+    display: flex;
+    justify-content: center;
 }
 
 /* TIMEPLAN */
@@ -244,6 +248,14 @@ th {
     color: white;
 }
 
+.mine-fag {
+    background-color: rgb(26, 85, 175);
+    color: white;
+    padding: 30px;
+    border-radius: 20px;
+    font-size: 20px;
+
+}
 
 /* RESPONSIVT DESIGN */
 @media (max-width: 770px) {
@@ -468,21 +480,147 @@ th {
     grid-column: span 2;
     grid-row: span 2;
 }
-.section-2{
+
+.section-2 {
     display: flex;
     justify-content: center;
     gap: 60px;
     margin-top: 20px;
 }
 
-.section-2 div{
+.section-2 div {
     border-radius: 20px;
     background-color: rgb(26, 85, 175);
     padding: 20px;
-    
-    
+
+
 }
 
 .section-2 div img {
     max-width: 300px;
+}
+
+/* interesser */
+.body-interesser {
+    min-height: 100vh;
+}
+
+/* Interesser container */
+.interesser-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* Hvert interesse kort */
+.interesse-item {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+/* Hover effekt */
+.interesse-item:hover {
+    transform: translate(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+
+.interesse-item:nth-child(2) {
+    grid-template-columns: 1fr 400px;
+}
+
+.interesse-item:nth-child(2) img {
+    order: 2;
+}
+
+.interesse-item:nth-child(2) h2,
+.interesse-item:nth-child(2) p {
+    order: 1;
+
+}
+
+/* Overskrifter i interesse kort */
+.interesse-item h2 {
+    font-size: 50px;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    grid-column: span 2;
+    border-bottom: 3px solid rgb(26, 85, 175);
+    padding-bottom: 10px;
+}
+
+/* Bilder */
+.interesse-item img {
+    max-width: 400px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.interesse-item:hover img {
+    transform: scale(1.05);
+}
+
+/* Tekst */
+.interesse-item p {
+    font-size: 30px;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* Responsivt design - Mobil */
+@media (max-width: 900px) {
+    .interesse-item {
+        grid-template-columns: 1fr !important;
+        padding: 30px;
+        gap: 25px;
+    }
+
+    .interesse-item h2 {
+        grid-column: span 1;
+        font-size: 28px;
+    }
+
+    .interesse-item img {
+        height: 250px;
+        order: 1 !important;
+    }
+
+    .interesse-item:nth-child(2) h2,
+    .interesse-item:nth-child(2) p {
+        order: 2 !important;
+    }
+
+    .interesser-container {
+        padding: 30px 15px;
+    }
+}
+
+@media (max-width: 600px) {
+    .interesse-item {
+        padding: 25px;
+    }
+
+    .interesse-item h2 {
+        font-size: 24px;
+    }
+
+    .interesse-item p {
+        font-size: 16px;
+    }
+
+    .interesse-item img {
+        height: 200px;
+    }
 }

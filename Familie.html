@@ -7,22 +7,238 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body>
+
+<style>
+    /* Familie container */
+    .familie-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 50px 20px;
+    }
+    
+    /* Intro seksjon - valgfri */
+    .familie-intro {
+        background: white;
+        border-radius: 20px;
+        padding: 40px;
+        margin-bottom: 50px;
+        text-align: center;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    }
+    
+    .familie-intro h2 {
+        font-size: 28px;
+        color: #2c3e50;
+        margin-bottom: 15px;
+    }
+    
+    .familie-intro p {
+        font-size: 18px;
+        color: #555;
+        line-height: 1.8;
+    }
+    
+    /* Grid layout for familiemedlemmer */
+    .familie-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        
+    }
+
+    
+    /* Hvert familiemedlem kort */
+    .familie-medlem {
+        background: white;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        transition: all 0.3s ease;
+       
+    }
+    
+    .familie-medlem:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    }
+    
+    /* Bilde seksjon */
+    .familie-medlem-bilde {
+        max-width: 100%;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+        object-fit: cover;
+    }
+    
+    .familie-medlem-bilde img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+    }
+    
+    .familie-medlem:hover .familie-medlem-bilde img {
+        transform: scale(1.1);
+    }
+    
+    /* Tekst seksjon */
+    .familie-medlem-info {
+        padding: 30px;
+    }
+    
+    .familie-medlem-info h3 {
+        font-size: 26px;
+        color: #2c3e50;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .familie-medlem-info h3 i {
+        color: rgb(26, 85, 175);
+        font-size: 22px;
+    }
+    
+    .familie-rolle {
+        color: rgb(26, 85, 175);
+        font-weight: 600;
+        font-size: 16px;
+        margin-bottom: 15px;
+        display: block;
+    }
+    
+    .familie-medlem-info p {
+        font-size: 16px;
+        line-height: 1.7;
+        color: #555;
+    }
+    
+    /* Responsivt design */
+    @media (max-width: 768px) {
+        .familie-grid {
+            grid-template-columns: 1fr;
+        }
+        
+        .familie-medlem-bilde {
+            max-width: 100%;
+        }
+        
+        .familie-intro {
+            padding: 30px 20px;
+        }
+        
+        
+    }
+    </style>
+</head>
+<body class="familie-body">
     <!-- NAVBAR -->
     <header>
         <div class="nav">
             <ul>
                 <li><a href="index.html"><i class="fa-solid fa-house-user fa-lg"></i>Hjem</a></li>
                 <li><a href="timeplan.html"><i class="fa-solid fa-calendar-days fa-lg"></i>Timeplan</a></li>
-                <li><a href="#"><i class="fa-solid fa-headphones fa-lg"></i>Interesser</a></li>
+                <li><a href="interesser.html"><i class="fa-solid fa-headphones fa-lg"></i>Interesser</a></li>
                 <li><a href="Familie.html"><i class="fa-solid fa-people-group fa-lg"></i>Min familie</a></li>
                 <li><a href="Ferier.html"><i class="fa-solid fa-plane-departure fa-lg"></i>Ferier</a></li>
             </ul>
         </div>
     </header>
-    <!-- /NAVBAR -->
 
-    <h1>Min Familie</h1>
+    <!-- Main -->
+    <section>
+        <h1>Min Familie</h1>
+
+        <div class="familie-container">
+            
+            <!-- Valgfri intro tekst -->
+            <div class="familie-intro">
+                <h2>Velkommen til min familie!</h2>
+                <p>Her kan du møte de viktigste personene i livet mitt. Vi er en tett familie som elsker å tilbringe tid sammen.</p>
+            </div>
+
+            <!-- Familie grid -->
+            <div class="familie-grid">
+                
+                <!-- Familiemedlem 1 - Eksempel -->
+                <div class="familie-medlem">
+                    <div class="familie-medlem-bilde">
+                        <img src="./Bilder/mamma.jpeg" alt="Mette wrangell">
+                    </div>
+                    <div class="familie-medlem-info">
+                        <h3><i class="fa-solid fa-user"></i>Mette Wrangell</h3>
+                        <span class="familie-rolle">Mor</span>
+                        <p>Skriv litt om denne personen her. Hva de liker å gjøre, deres personlighet, eller noe morsomt/spesielt om dem.</p>
+                    </div>
+                </div>
+
+                <!-- Familiemedlem 2 - Eksempel -->
+                <div class="familie-medlem">
+                    <div class="familie-medlem-bilde">
+                        <img src="./Bilder/pappa.jpg" alt="Sindre Wrangell">
+                    </div>
+                    <div class="familie-medlem-info">
+                        <h3><i class="fa-solid fa-user"></i>Sindre Wrangell</h3>
+                        <span class="familie-rolle">Far</span>
+                        <p>Skriv litt om denne personen her. Hva de liker å gjøre, deres personlighet, eller noe morsomt/spesielt om dem.</p>
+                    </div>
+                </div>
+
+                <!-- Familiemedlem 3 - Eksempel -->
+                <div class="familie-medlem">
+                    <div class="familie-medlem-bilde">
+                        <img src="./Bilder/eline.jpg" alt="Eline Wrangell">
+                    </div>
+                    <div class="familie-medlem-info">
+                        <h3><i class="fa-solid fa-user"></i>Eline Wrangell</h3>
+                        <span class="familie-rolle">Søster</span>
+                        <p>Skriv litt om denne personen her. Hva de liker å gjøre, deres personlighet, eller noe morsomt/spesielt om dem.</p>
+                    </div>
+                </div>
+
+                <!-- Familiemedlem 4 - Eksempel -->
+                <div class="familie-medlem">
+                    <div class="familie-medlem-bilde">
+                        <img src="./Bilder/jarle.jpg" alt="Jarle Nordskog">
+                    </div>
+                    <div class="familie-medlem-info">
+                        <h3><i class="fa-solid fa-user"></i>Jarle Nordskog</h3>
+                        <span class="familie-rolle">Ste-far</span>
+                        <p>Skriv litt om denne personen her. Hva de liker å gjøre, deres personlighet, eller noe morsomt/spesielt om dem.</p>
+                    </div>
+                </div>
+                <div class="familie-medlem">
+                    <div class="familie-medlem-bilde">
+                        <img src="./Bilder/nina.jpg" alt="Nina Birkeland">
+                    </div>
+                    <div class="familie-medlem-info">
+                        <h3><i class="fa-solid fa-user"></i>Nina Birkeland</h3>
+                        <span class="familie-rolle">Ste-mor</span>
+                        <p>Skriv litt om denne personen her. Hva de liker å gjøre, deres personlighet, eller noe morsomt/spesielt om dem.</p>
+                    </div>
+                </div>
+
+
+                <div class="familie-medlem">
+                    <div class="familie-medlem-bilde">
+                        <img src="./Bilder/tinde.jpeg" alt="Tinde Wrangell">
+                    </div>
+                    <div class="familie-medlem-info">
+                        <h3><i class="fa-solid fa-user"></i>Tinde Wrangell</h3>
+                        <span class="familie-rolle">Kjæledyr</span>
+                        <p>Skriv litt om denne personen her. Hva de liker å gjøre, deres personlighet, eller noe morsomt/spesielt om dem.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+  
+
 
     <!-- FOOTER -->
     <footer>

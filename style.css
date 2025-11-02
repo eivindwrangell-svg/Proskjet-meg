@@ -187,6 +187,8 @@ section div img {
     padding: 20px;
 }
 
+
+
 table {
     margin: 40px auto;
     border-collapse: collapse;
@@ -326,6 +328,7 @@ th {
 
 .ferie-intro {
     display: flex;
+    flex-wrap: wrap;
     padding: 40px 20px;
     justify-content: center;
     gap: 60px;
